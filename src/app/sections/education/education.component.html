@@ -1,0 +1,26 @@
+<div class="education-container">
+  <h2 class="section-title">Education & Certifications</h2>
+
+  <div class="timeline">
+    <!-- Education -->
+    <div *ngFor="let edu of education" class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>{{ edu.school }}</h3>
+        <p class="degree">{{ edu.degree }}</p>
+        <p class="duration">{{ edu.start }} - {{ edu.end ? edu.end : 'Present' }}</p>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="timeline-item certifications">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Certifications</h3>
+        <ul>
+          <li *ngFor="let cert of certifications">{{ cert.name }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

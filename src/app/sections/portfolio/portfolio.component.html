@@ -1,0 +1,28 @@
+<div class="portfolio-container">
+ 
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects; let i = index">
+      <h3 class="project-name">{{ project.name }}</h3>
+
+      <p class="project-description">
+        {{ expanded[i] ? project.description : getShortText(project.description, 180) }}
+      </p>
+      <button class="toggle-btn" (click)="toggleDescription(i)">
+        {{ expanded[i] ? 'Show Less' : 'Show More' }}
+      </button>
+
+      <div class="project-stack">
+        <span *ngFor="let tech of project.stack" class="tech-icon">
+          <i [class]="iconFor(tech)"></i> {{ tech }}
+        </span>
+      </div>
+
+      <div class="project-links">
+        <a *ngFor="let link of project.links" href="{{ link.url }}" target="_blank" rel="noopener">
+          {{ link.label }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<section class="mh-experience" id="mh-experience">
+  <div class="container">
+    <div class="row section-separator">
+
+      <div class="col-sm-12">
+        <div class="mh-work">
+          <!-- <h3 class="text-white wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+            Work Experience
+          </h3> -->
+
+   <div class="mh-work-item dark-bg wow fadeInUp" *ngFor="let exp of experience; let i = index" [attr.data-wow-delay]="0.3 + i * 0.2 + 's'">
+  <div class="work-logo">
+    <img [src]="exp.logo" [alt]="exp.company" class="company-logo"/>
+  </div>
+  <div class="work-info">
+    <h4>{{ exp.role }} <a href="#">{{ exp.company }}</a></h4>
+    <div class="mh-eduyear">{{ exp.start }} - {{ exp.end }}</div>
+    <span>Responsibility :</span>
+    <ul class="work-responsibility">
+      <li *ngFor="let bullet of exp.bullets"><i class="fa fa-circle"></i> {{ bullet }}</li>
+    </ul>
+  </div>
+</div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

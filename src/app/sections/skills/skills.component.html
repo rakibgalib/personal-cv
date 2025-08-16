@@ -1,0 +1,21 @@
+<section class="mh-skills" id="mh-skills">
+  <div class="container">
+    <div class="row section-separator">
+      <div class="section-title text-center col-sm-12">
+        <h2>My Skills</h2>
+      </div>
+
+      <div class="col-sm-12 col-md-6 skill-group" *ngFor="let skillGroup of skills">
+  <div class="mh-skills-inner wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+    <h3>{{ skillGroup.title }}</h3>
+    <ul class="skills-list">
+      <li *ngFor="let item of skillGroup.items">
+        <i [class]="getIconClass(item)"></i>
+        <span>{{ item }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+    </div>
+  </div>
+</section>

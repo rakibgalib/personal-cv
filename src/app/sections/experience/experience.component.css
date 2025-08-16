@@ -1,0 +1,44 @@
+.mh-work-item {
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background-color: #1f1f25; /* Dark background */
+}
+
+.mh-work-item h4 a {
+  color: #ffb400; /* Highlight company name */
+  text-decoration: none;
+}
+
+.mh-eduyear {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.work-responsibility li {
+  color: #fff;
+  line-height: 1.6;
+}
+
+.work-responsibility li i {
+  color: #ffb400;
+  margin-right: 8px;
+}
+
+h3.text-white {
+  color: white;
+  margin-bottom: 30px;
+}
+.work-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; /* space between logo and info */
+}
+
+.company-logo {
+  height: 50px; /* fixed height */
+  width: auto;   /* maintain aspect ratio */
+  object-fit: contain;
+}
