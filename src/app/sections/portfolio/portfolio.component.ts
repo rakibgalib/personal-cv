@@ -39,6 +39,9 @@ export class PortfolioComponent {
     'Angular': 'devicon-angularjs-plain colored',
     'SQL Server': 'devicon-microsoftsqlserver-plain colored',
     'Oracle': 'devicon-oracle-original colored',
+    'Node js': 'devicon-nodejs-plain-wordmark colored',
+    
+    'React': 'devicon-react-original colored',
     'Mongo DB': 'devicon-mongodb-plain colored',
   'Ethereum': 'devicon-ethereum-original colored',
   'Solidity': 'devicon-solidity-plain colored'

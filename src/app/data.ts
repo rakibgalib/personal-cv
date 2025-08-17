@@ -117,6 +117,24 @@ export const PORTFOLIO: Portfolio = {
       links: [{ label: 'Pharmachain', url: 'https://leads.com.bd/digital-innovation/pharmaceutical-products-tracker/' }],
       stack: ['.NET', 'Ethereum', 'Solidity','Html','CSS','Mongo DB','SQL Server','Jquery']
     },
+      {
+      name: 'Fund Fury',
+      description: 'This platform enables seamless charitable fundraising and transparent fund management. It allows users to create donation projects, contribute using multiple payment options (includingdigital tokens and fiat-equivalent assets), and track project progress. Administrative panels and user management features are included for efficient platform governance.',
+      links: [{ label: 'Fund Fury', url: 'https://fundfury.vercel.app/' }],
+      stack: ['Node js', 'Ethereum', 'Solidity','React','Bootstrap','Mongo DB']
+    },
+        {
+      name: 'Metawirks',
+      description: 'This platform can create both F-NFT and NFT. Users can create and sell their NFT as single or as a fractional. Platform use openzappline ERC20, ERC 721, ERC 1155, ERC 712 for the library. This platform is based on Ethereum,polygonmatic.This platform follows Cross-Chain Interoperability Protocol (CCIP).so user can use multiple platforms and currencies to buy and sell NFT. It also supports Gassless transactions. ',
+      links: [{ label: 'Fund Fury', url: 'https://fundfury.vercel.app/' }],
+      stack: ['Node js', 'Ethereum', 'Solidity','React','Bootstrap','Mongo DB']
+    },
+      {
+      name: 'Pharmachain',
+      description: 'One of the major problems in pharmaceuticals industry is that the fake medicine which cost the loss of Lives as well as the loss in the business. The identification of duplicate medicine and track down the original one is tough without proper information.Through PharmaChain pharmaceutical companies will be able to monitor and track their full distribution process. This will also notify them when a fake medicine is being sold inside the distribution channel or to the end customers.',
+      links: [{ label: 'Pharmachain', url: 'https://leads.com.bd/digital-innovation/pharmaceutical-products-tracker/' }],
+      stack: ['Node js', 'Ethereum', 'Solidity','React','Bootstrap','Mongo DB']
+    },
     {
       name: 'HX Manager',
       description: 'Automation tool that monitors booking/ticket expiration and triggers alerts & auto-cancel.',
