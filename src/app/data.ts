@@ -64,10 +64,10 @@ export const PORTFOLIO: Portfolio = {
     linkedin: 'https://linkedin.com/in/galibwow',
     resumeUrl: 'assets/RakibHossainLatx.pdf',
     social: [
-      { label: 'facebook', url: 'https://facebook.com/username' },
-      { label: 'twitter', url: 'https://twitter.com/username' },
-      { label: 'github', url: 'https://github.com/username' },
-      { label: 'dribbble', url: 'https://dribbble.com/username' }
+      { label: 'facebook', url: 'https://facebook.com/galibwow' },
+      { label: 'linkedin', url: 'https://www.linkedin.com/in/rakibhossaingalib/' },
+      { label: 'github', url: 'https://github.com/rakibgalib' },
+  
     ],
     summary:
       'Full-stack engineer with 7+ years building secure, scalable web apps. Strong in ASP.NET Core, Web API, Angular, SQL Server, and Ethereum smart contracts.'
