@@ -139,7 +139,16 @@ export const PORTFOLIO: Portfolio = {
       name: 'HX Manager',
       description: 'Automation tool that monitors booking/ticket expiration and triggers alerts & auto-cancel.',
       stack: ['.NET', 'C#', 'SQL Server']
-    }
+    },
+      {
+    name: 'Collection Efficiency Improvement Program',
+    description: 'A payment collection and reporting system for IDCOL SHS program. It streamlined verification and reporting workflows, improving financial sustainability and reducing payment discrepancies.',
+    stack: ['.NET MVC', 'Jquery', 'Html', 'CSS', 'SQL Server']
+  }, {
+    name: 'Leads Bank Chain',
+    description: 'Bank statement authentication system for DBBL and other banks. Provides tamper-proof verification of financial documents using Ethereum blockchain and smart contracts.',
+    stack: ['Ethereum', 'Truffle', 'ASP.NET Web API', 'Azure Blockchain Service']
+  }
   ],
 
   experience: [
