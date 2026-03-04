@@ -1,26 +1,113 @@
-<div class="education-container">
-  <h2 class="section-title">Education & Certifications</h2>
+<section class="modern-education" id="education">
+  <!-- Background Decoration -->
+  <div class="edu-bg">
+    <div class="edu-gradient"></div>
+  </div>
 
-  <div class="timeline">
-    <!-- Education -->
-    <div *ngFor="let edu of education" class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>{{ edu.school }}</h3>
-        <p class="degree">{{ edu.degree }}</p>
-        <p class="duration">{{ edu.start }} - {{ edu.end ? edu.end : 'Present' }}</p>
-      </div>
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center">
+      <span class="section-subtitle">My Journey</span>
+      <h2 class="section-title">Education & Certifications</h2>
+      <p class="section-description">
+        Continuous learning and professional development in software engineering and blockchain technology
+      </p>
     </div>
 
-    <!-- Certifications -->
-    <div class="timeline-item certifications">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Certifications</h3>
-        <ul>
-          <li *ngFor="let cert of certifications">{{ cert.name }}</li>
-        </ul>
+    <div class="education-content">
+
+      <!-- Education Section -->
+      <div class="edu-section">
+        <div class="section-header-inline">
+          <div class="section-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="section-heading">Education</h3>
+        </div>
+
+        <div class="timeline">
+          <div *ngFor="let edu of education; let i = index" class="timeline-item wow fadeInUp">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line" *ngIf="i < education.length - 1"></div>
+            </div>
+
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="card-icon edu-icon">
+                  <i class="fas fa-university"></i>
+                </div>
+                <div class="card-meta">
+                  <h4 class="card-title">{{ edu.school }}</h4>
+                  <p class="card-subtitle">{{ edu.degree }}</p>
+                </div>
+                <div class="card-year">
+                  <span>{{ edu.start }}</span>
+                  <span class="year-separator">→</span>
+                  <span>{{ edu.end || 'Present' }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Certifications Section -->
+      <div class="edu-section">
+        <div class="section-header-inline">
+          <div class="section-icon cert-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3 class="section-heading">Certifications</h3>
+        </div>
+
+        <div class="cert-grid">
+          <div *ngFor="let cert of certifications" class="cert-card wow fadeInUp">
+            <div class="cert-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="cert-content">
+              <h4 class="cert-name">{{ cert.name }}</h4>
+              <p class="cert-org" *ngIf="cert.org">{{ cert.org }}</p>
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Summary -->
+      <div class="edu-stats">
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number">{{ education.length }}</div>
+            <div class="stat-label">Degrees</div>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number">{{ certifications.length }}</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number">7+</div>
+            <div class="stat-label">Years Learning</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
+</section>

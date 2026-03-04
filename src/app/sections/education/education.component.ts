@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PORTFOLIO } from '../../data'; // adjust path according to your project
+import { RouterLink } from '@angular/router';
+import { PORTFOLIO } from '../../data';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })

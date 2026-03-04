@@ -39,20 +39,21 @@
     | Mobile NAv trigger
     |=====================
     */
-    
-    var trigger = $('.navbar-toggler'),
-      overlay     = $('.overlay'),
-      navc     = $('.navbar-collapse'),
-      active      = false;
-  
+    // DISABLED - Angular now handles navigation with routerLink
+    // The old jQuery handler was preventing Angular router from working
 
-      $('.navbar-toggler, .navbar-nav li a, .overlay').on('click', function () {
-          $('.navbar-toggler').toggleClass('active')
-        //   $('#js-navbar-menu').toggleClass('active');
-        //   $('.navbar-collapse').toggleClass('show');
-          overlay.toggleClass('active');
-          navc.toggleClass('active');
-      });  
+    // var trigger = $('.navbar-toggler'),
+    //   overlay     = $('.overlay'),
+    //   navc     = $('.navbar-collapse'),
+    //   active      = false;
+
+    //   $('.navbar-toggler, .navbar-nav li a, .overlay').on('click', function () {
+    //       $('.navbar-toggler').toggleClass('active')
+    //     //   $('#js-navbar-menu').toggleClass('active');
+    //     //   $('.navbar-collapse').toggleClass('show');
+    //       overlay.toggleClass('active');
+    //       navc.toggleClass('active');
+    //   });  
       
         
     /*
@@ -60,13 +61,15 @@
     | Onepage Nav
     |================
     */
-        
-      $('#mh-header').onePageNav({
-          currentClass: 'active', 
-          changeHash: false,
-          scrollSpeed: 750,
-          scrollThreshold: 0.5,
-      });
+    // DISABLED - Angular Router now handles navigation
+    // The onePageNav jQuery plugin was interfering with Angular routing
+
+    //   $('#mh-header').onePageNav({
+    //       currentClass: 'active',
+    //       changeHash: false,
+    //       scrollSpeed: 750,
+    //       scrollThreshold: 0.5,
+    //   });
     
     /*
     |=================

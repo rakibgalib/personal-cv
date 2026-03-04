@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { PORTFOLIO, SkillGroup } from '../../data';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
@@ -26,17 +27,16 @@ export class SkillsComponent implements OnInit {
     'CSS3': 'devicon-css3-plain colored',
     'Python': 'devicon-python-plain colored',
     'Solidity': 'devicon-solidity-plain colored',
-    'Angular': 'devicon-angularjs-plain colored',           // fixed key
-    '.NET Core': 'devicon-dotnetcore-plain colored',        // correct naming
+    'Angular': 'devicon-angularjs-plain colored',
+    '.NET Core': 'devicon-dotnetcore-plain colored',
     'ASP.NET MVC': 'devicon-dotnet-plain colored',
     'Web API': 'devicon-dot-net-plain colored',
-    'Databases': '', // handled separately
-    'Tools & Platforms': '', // placeholder
-    // Some icons are unavailable in Devicon; provide fallbacks
+    'Databases': '',
+    'Tools & Platforms': '',
     'Blockchain (Ethereum)': 'devicon-ethereum-plain colored',
-    'Remix IDE': 'devicon-solidity-plain colored', 
-    'selenium': 'devicon-selenium-original colored',         // fallback
-    'ReSharper': 'devicon-jetbrains-plain colored',                      // fallback
+    'Remix IDE': 'devicon-solidity-plain colored',
+    'selenium': 'devicon-selenium-original colored',
+    'ReSharper': 'devicon-jetbrains-plain colored',
     'Payment/SMS Gateways': 'devicon-amazonwebservices-plain colored',
     'RoomXML': 'devicon-xml-plain',
     'Visual Studio': 'devicon-visualstudio-plain colored',
@@ -48,10 +48,9 @@ export class SkillsComponent implements OnInit {
     'Bootstrap': 'devicon-bootstrap-plain colored',
     'jQuery': 'devicon-jquery-plain colored',
     'Bitbucket': 'devicon-bitbucket-original colored'
-    
   };
 
-  return icons[skill] || 'devicon-code-plain'; // fallback if not found
+  return icons[skill] || 'devicon-code-plain';
 }
 
 }

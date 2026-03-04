@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== GLOBAL STYLES ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  background: #0a0a1a;
+}
+
+/* Section Base Styles */
+section {
+  position: relative;
+}
+
+/* ===== ABOUT SECTION OVERRIDES ===== */
+.mh-about {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+/* ===== DEVICON ICONS ===== */
+.devicon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.align-items-center {
+  align-items: center;
+}

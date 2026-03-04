@@ -148,6 +148,14 @@ export const PORTFOLIO: Portfolio = {
     name: 'Leads Bank Chain',
     description: 'Bank statement authentication system for DBBL and other banks. Provides tamper-proof verification of financial documents using Ethereum blockchain and smart contracts.',
     stack: ['Ethereum', 'Truffle', 'ASP.NET Web API', 'Azure Blockchain Service']
+  },
+    {
+    name: 'GainFi DeFi Platform',
+    description: 'GainFi is a decentralized token presale platform deployed on Polygon Mainnet. The platform enables users to purchase GainFi tokens using various cryptocurrencies including ETH, MATIC, USDT, USDC, and custom ERC20 tokens. Features include multi-token support, cross-chain capability (Ethereum Sepolia, Polygon Amoy), MetaMask and Reown wallet integration, real-time transaction tracking, admin dashboard with earnings management, Docker containerized deployment, PostgreSQL database, and responsive design. Smart contract deployed at 0xfA9E449F31F68703f1cBF14A67Cc2A3fc10a977b. Production live at gainfi.finance. Accepted into NVIDIA Inception Program.',
+    links: [
+      { label: 'Live Site', url: 'http://gainfi.finance' }
+    ],
+    stack: ['React', 'Node js', 'Ethereum', 'Solidity', 'PostgreSQL', 'Web3.js', 'Ethers.js', 'Hardhat', 'Express js', 'Docker', 'Vite']
   }
   ],
 

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { PORTFOLIO, Project } from '../../data';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css']
 })
@@ -40,11 +41,17 @@ export class PortfolioComponent {
     'SQL Server': 'devicon-microsoftsqlserver-plain colored',
     'Oracle': 'devicon-oracle-original colored',
     'Node js': 'devicon-nodejs-plain-wordmark colored',
-    
     'React': 'devicon-react-original colored',
     'Mongo DB': 'devicon-mongodb-plain colored',
-  'Ethereum': 'devicon-ethereum-original colored',
-  'Solidity': 'devicon-solidity-plain colored'
+    'Ethereum': 'devicon-ethereum-original colored',
+    'Solidity': 'devicon-solidity-plain colored',
+    'PostgreSQL': 'devicon-postgresql-plain colored',
+    'Docker': 'devicon-docker-plain colored',
+    'Vite': 'devicon-vitejs-plain colored',
+    'Web3.js': 'devicon-ethereum-original colored',
+    'Ethers.js': 'devicon-ethereum-original colored',
+    'Hardhat': 'fa fa-code',
+    'Express js': 'devicon-express-original colored'
   };
 
   iconFor(tech: string): string {

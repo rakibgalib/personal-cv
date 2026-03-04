@@ -1,48 +1,131 @@
-<section class="mh-about py-5" id="mh-about">
+<section class="modern-about" id="mh-about">
+  <!-- Background Decoration -->
+  <div class="about-bg">
+    <div class="about-gradient"></div>
+  </div>
+
   <div class="container">
-    <div class="row section-separator align-items-center">
-      <div class="section-title text-center col-12 mb-4">
-        <h2>About Me</h2>
-      </div>
+    <!-- Section Header -->
+    <div class="section-header text-center">
+      <span class="section-subtitle">Get To Know</span>
+      <h2 class="section-title">About Me</h2>
+      <p class="section-description">
+        Passionate about building secure, scalable web applications and blockchain solutions
+      </p>
+    </div>
 
-      <!-- Profile Image & Social Icons -->
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <div class="mh-about-img mb-3 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-          <img src="assets/images/pp size-modified.png" alt="Profile Picture" class="img-fluid rounded-circle">
-        </div>
+    <div class="about-content">
 
-        <!-- Social Media -->
-        <div class="mh-social-icons">
-          <a href="https://facebook.com/galibwow" target="_blank" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          
-          <a href="https://github.com/rakibgalib" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/rakibhossaingalib" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          
-        </div>
-      </div>
+      <!-- Profile Card -->
+      <div class="profile-card">
+        <div class="profile-image-wrapper">
+          <div class="profile-image-container">
+            <img src="assets/images/pp size-modified.png" alt="Profile Picture" class="profile-img">
+            <div class="profile-status">
+              <span class="status-dot"></span>
+              <span>Available</span>
+            </div>
+          </div>
 
-      <!-- About Text & Quick Facts -->
-      <div class="col-md-8">
-        <div class="mh-about-inner wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-          <p>{{ basics.summary }}</p>
-
-          <div class="mh-about-skills mt-4">
-            <h3>Quick Facts</h3>
-            <ul class="list-unstyled">
-              <li><strong>Full Name:</strong> {{ basics.name }}</li>
-              <li><strong>Location:</strong> {{ basics.location }}</li>
-              <li><strong>Email:</strong> {{ basics.email }}</li>
-              <li><strong>Experience:</strong> 7+ Years</li>
-              <li><strong>Education:</strong> Bachelor’s in Computer Science</li>
-            </ul>
+          <!-- Social Icons -->
+          <div class="profile-social">
+            <a href="https://facebook.com/galibwow" target="_blank" class="social-link facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://github.com/rakibgalib" target="_blank" class="social-link github">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/rakibhossaingalib" target="_blank" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="info-cards-wrapper">
+
+        <!-- Summary Card -->
+        <div class="info-card summary-card">
+          <div class="card-icon">
+            <i class="fa fa-user"></i>
+          </div>
+          <h3>Who I Am</h3>
+          <p>{{ basics.summary }}</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">7+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">{{ portfolio?.projects?.length || 10 }}+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">{{ portfolio?.skills?.length || 5 }}</div>
+            <div class="stat-label">Skill Categories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+        </div>
+
+        <!-- Quick Info Card -->
+        <div class="info-card details-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fa fa-info-circle"></i>
+            </div>
+            <h3>Quick Info</h3>
+          </div>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">
+                <i class="fa fa-user"></i>
+                Full Name
+              </span>
+              <span class="info-value">{{ basics.name }}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">
+                <i class="fa fa-map-marker"></i>
+                Location
+              </span>
+              <span class="info-value">{{ basics.location }}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">
+                <i class="fa fa-envelope"></i>
+                Email
+              </span>
+              <span class="info-value">{{ basics.email }}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">
+                <i class="fa fa-graduation-cap"></i>
+                Education
+              </span>
+              <span class="info-value">{{ education?.[0]?.degree || 'B.Sc. in Software Engineering' }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons">
+          <a routerLink="/contact" class="btn btn-primary">
+            <i class="fa fa-paper-plane"></i>
+            <span>Get In Touch</span>
+          </a>
+          <a *ngIf="basics.resumeUrl" [href]="basics.resumeUrl" download class="btn btn-outline">
+            <i class="fa fa-download"></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+
       </div>
 
     </div>

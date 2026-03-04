@@ -1,0 +1,79 @@
+/* ===== HEADER NAVIGATION FIX ===== */
+
+/* Ensure header is always on top and clickable */
+header#mh-header {
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+/* Ensure nav container has proper z-index */
+.navbar {
+  position: relative !important;
+  z-index: 1001 !important;
+}
+
+/* Ensure nav links are always clickable */
+.navbar-nav {
+  position: relative !important;
+  z-index: 1002 !important;
+}
+
+.nav-link {
+  position: relative !important;
+  z-index: 1003 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure overlay doesn't block navigation when not active */
+.overlay:not(.active) {
+  pointer-events: none !important;
+}
+
+/* Ensure navbar-collapse has proper z-index */
+.navbar-collapse {
+  position: relative !important;
+  z-index: 1004 !important;
+}
+
+/* Mobile menu fix */
+@media (max-width: 991px) {
+  .navbar-collapse.show,
+  .navbar-collapse.active {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    height: 100vh !important;
+    width: 280px !important;
+    background: #1a1a2e !important;
+    z-index: 9999 !important;
+    padding: 80px 30px 30px !important;
+  }
+
+  .navbar-collapse .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .navbar-collapse .nav-item {
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
+
+  .navbar-collapse .nav-link {
+    display: block !important;
+    padding: 12px 16px !important;
+  }
+
+  .overlay.active {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    z-index: 9998 !important;
+    pointer-events: auto !important;
+  }
+}

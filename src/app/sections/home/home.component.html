@@ -1,57 +1,120 @@
 <section class="mh-home" id="mh-home">
+  <!-- Animated Background -->
+  <div class="hero-bg">
+    <div class="gradient-bg"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </div>
+
   <div class="home-ovimg">
     <div class="container">
       <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
 
         <!-- Left Column: Info -->
         <div class="col-sm-6">
-          <div class="mh-header-info">
-            
-            <!-- Promo -->
-            <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-              <span>Hello I'm</span>
-            </div>
-            
-            <!-- Name & Title -->
-            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">{{ portfolio.basics.name }}</h2>
-            <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">{{ portfolio.basics.title }}</h4>
-            
-            <!-- Contact Info -->
-            <ul>
-              <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                <i class="fa fa-envelope"></i>
-                <a [href]="'mailto:' + portfolio.basics.email">{{ portfolio.basics.email }}</a>
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" *ngIf="portfolio.basics.phone">
-                <i class="fa fa-phone"></i>
-                <a [href]="'tel:' + portfolio.basics.phone">{{ portfolio.basics.phone }}</a>
-              </li>
-              <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" *ngIf="portfolio.basics.location">
-                <i class="fa fa-map-marker"></i>
-                <address>{{ portfolio.basics.location }}</address>
-              </li>
-            </ul>
+          <div class="hero-content">
 
-            <!-- Social Links -->
-            <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-              <li *ngFor="let social of portfolio.basics.social">
-                <a [href]="social.url" target="_blank"><i class="fa fa-{{ social.label }}"></i></a>
-              </li>
-            </ul>
+            <!-- Badge -->
+            <div class="hero-badge wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+              <span class="badge-dot"></span>
+              <span>Available for Work</span>
+            </div>
+
+            <!-- Promo -->
+            <div class="hero-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+              <span>Hello, I'm</span>
+            </div>
+
+            <!-- Name & Title -->
+            <h1 class="hero-name wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+              {{ portfolio.basics.name }}
+            </h1>
+            <div class="hero-title-wrapper wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+              <h2 class="hero-title">
+                <span class="title-text">{{ portfolio.basics.title }}</span>
+                <span class="cursor">|</span>
+              </h2>
+            </div>
 
             <!-- Summary -->
-            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s" *ngIf="portfolio.basics.summary">
+            <p class="hero-summary wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" *ngIf="portfolio.basics.summary">
               {{ portfolio.basics.summary }}
             </p>
-            
+
+            <!-- Contact Info -->
+            <div class="hero-contact wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+              <div class="contact-item" *ngIf="portfolio.basics.email">
+                <i class="fas fa-envelope"></i>
+                <span>{{ portfolio.basics.email }}</span>
+              </div>
+              <div class="contact-item" *ngIf="portfolio.basics.phone">
+                <i class="fas fa-phone"></i>
+                <span>{{ portfolio.basics.phone }}</span>
+              </div>
+              <div class="contact-item" *ngIf="portfolio.basics.location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>{{ portfolio.basics.location }}</span>
+              </div>
+            </div>
+
+            <!-- CTA Buttons & Social -->
+            <div class="hero-actions wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+              <div class="hero-buttons">
+                <a href="javascript:void(0)" (click)="navigateTo('/portfolio')" class="btn btn-primary">
+                  <span>View My Work</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <a *ngIf="portfolio.basics.resumeUrl" [href]="portfolio.basics.resumeUrl" download class="btn btn-outline">
+                  <i class="fas fa-download"></i>
+                  <span>Download CV</span>
+                </a>
+              </div>
+
+              <!-- Social Links -->
+              <div class="hero-social">
+                <span>Follow me:</span>
+                <div class="social-links">
+                  <a *ngFor="let social of portfolio.basics.social"
+                     [href]="social.url"
+                     target="_blank"
+                     class="social-link">
+                    <i [class]="getSocialIcon(social.label)"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
         <!-- Right Column: Hero Image -->
         <div class="col-sm-6">
-          <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-            <div class="img-border">
-              <img src="assets/images/pp size-modified.png" alt="Hero Image" class="img-fluid">
+          <div class="hero-image-wrapper wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <div class="hero-image-border">
+              <div class="image-ring ring-1"></div>
+              <div class="image-ring ring-2"></div>
+              <div class="image-ring ring-3"></div>
+              <img src="assets/images/pp size-modified.png" alt="Hero Image" class="hero-img">
+            </div>
+
+            <!-- Floating Tech Icons -->
+            <div class="floating-tech">
+              <div class="tech-icon tech-icon-1">
+                <i class="devicon-angularjs-plain colored"></i>
+              </div>
+              <div class="tech-icon tech-icon-2">
+                <i class="devicon-dot-net-plain colored"></i>
+              </div>
+              <div class="tech-icon tech-icon-3">
+                <i class="devicon-csharp-plain colored"></i>
+              </div>
+              <div class="tech-icon tech-icon-4">
+                <i class="devicon-nodejs-plain-wordmark colored"></i>
+              </div>
             </div>
           </div>
         </div>
