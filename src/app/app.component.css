@@ -53,3 +53,69 @@
   background-color: #0056b3;
   color: #fff;
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .mh-about {
+    padding: 50px 0;
+  }
+
+  .mh-about-inner p {
+    font-size: 1rem;
+  }
+
+  .mh-social-links a {
+    font-size: 1.3rem;
+    margin-right: 12px;
+  }
+
+  .btn-resume {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .mh-about {
+    padding: 40px 0;
+  }
+
+  .mh-about-inner p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .mh-about-img img {
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+  .mh-social-links {
+    text-align: center;
+  }
+
+  .mh-social-links a {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .btn-resume {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .mh-about-inner p {
+    font-size: 0.9rem;
+  }
+
+  .mh-social-links a {
+    font-size: 1.1rem;
+  }
+}

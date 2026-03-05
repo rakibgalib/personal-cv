@@ -62,4 +62,62 @@ body.dark-vertion .skills-list li {
 body.dark-vertion .skills-list li span {
   color: #fff;
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .skills-list {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .skills-list li {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .skills-list i {
+    font-size: 1.2rem;
+  }
+
+  .skill-group {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .skills-list {
+    gap: 6px;
+  }
+
+  .skills-list li {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .skills-list i {
+    font-size: 1.1rem;
+  }
+
+  .mh-skills-inner h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .skill-group {
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .skills-list li {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .skills-list i {
+    font-size: 1rem;
+  }
+}
  

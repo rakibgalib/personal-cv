@@ -77,3 +77,102 @@ header#mh-header {
     pointer-events: auto !important;
   }
 }
+
+/* ===== ENHANCED MOBILE NAVIGATION ===== */
+
+@media (max-width: 767px) {
+  /* Header adjustments */
+  header#mh-header {
+    padding: 10px 0 !important;
+  }
+
+  /* Navbar toggler improvements */
+  .navbar-toggler {
+    width: 44px !important;
+    height: 44px !important;
+    padding: 10px !important;
+    border: none !important;
+    background: rgba(99, 102, 241, 0.1) !important;
+    border-radius: 10px !important;
+  }
+
+  .navbar-toggler .icon {
+    width: 22px !important;
+    height: 2px !important;
+    background: #818cf8 !important;
+  }
+
+  .navbar-toggler .icon::before,
+  .navbar-toggler .icon::after {
+    width: 22px !important;
+    height: 2px !important;
+    background: #818cf8 !important;
+  }
+
+  /* Mobile menu slide-in from right */
+  .navbar-collapse.show,
+  .navbar-collapse.active {
+    width: 300px !important;
+    background: linear-gradient(180deg, #1a1a2e 0%, #0f0f23 100%) !important;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* Nav items styling */
+  .navbar-collapse .nav-item {
+    margin: 8px 0 !important;
+  }
+
+  .navbar-collapse .nav-link {
+    padding: 14px 18px !important;
+    font-size: 16px !important;
+    color: #cbd5e1 !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .navbar-collapse .nav-link:hover,
+  .navbar-collapse .nav-link.active {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #818cf8 !important;
+    transform: translateX(5px) !important;
+  }
+
+  /* Overlay styling */
+  .overlay.active {
+    background: rgba(0, 0, 0, 0.75) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller menu width for very small screens */
+  .navbar-collapse.show,
+  .navbar-collapse.active {
+    width: 260px !important;
+    padding: 70px 20px 20px !important;
+  }
+
+  .navbar-collapse .nav-link {
+    padding: 12px 14px !important;
+    font-size: 15px !important;
+  }
+
+  /* Adjust toggler positioning */
+  .navbar-toggler {
+    margin-right: 10px !important;
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+  .navbar-toggler {
+    -webkit-tap-highlight-color: rgba(99, 102, 241, 0.3) !important;
+  }
+
+  .navbar-toggler:active {
+    transform: scale(0.95) !important;
+  }
+
+  .nav-link {
+    -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2) !important;
+  }
+}

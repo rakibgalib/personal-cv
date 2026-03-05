@@ -507,4 +507,177 @@
   .home-padding {
     padding: 60px 0; } }
 
+/* ===== ADDITIONAL MOBILE ENHANCEMENTS ===== */
+
+/* Extra Small Mobile (up to 360px) */
+@media only screen and (max-width: 360px) {
+  .section-separator {
+    padding: 25px 0;
+  }
+
+  .mh-home .hero-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .mh-home .mh-header-info h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .mh-home .mh-header-info h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .mh-home .mh-header-info p {
+    font-size: 13px;
+  }
+
+  .mh-home .mh-header-info .mh-promo {
+    font-size: 14px;
+  }
+
+  /* Portfolio cards */
+  .portfolio-container {
+    padding: 50px 10px 30px 10px;
+  }
+
+  .project-card {
+    padding: 14px;
+  }
+}
+
+/* Small Mobile (361px - 400px) */
+@media only screen and (min-width: 361px) and (max-width: 400px) {
+  .mh-home .hero-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .mh-home .mh-header-info h2 {
+    font-size: 32px;
+  }
+}
+
+/* Landscape Mobile */
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+  .home-padding {
+    padding: 60px 0;
+  }
+
+  .mh-home .hero-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section-separator {
+    padding: 30px 0;
+  }
+
+  /* Adjust floating shapes for landscape */
+  .shape {
+    opacity: 0.4;
+  }
+
+  /* Hide some decorative elements */
+  .floating-tech {
+    display: none;
+  }
+}
+
+/* Touch device specific styles */
+@media (hover: none) and (pointer: coarse) {
+  /* Improve tap targets */
+  a,
+  button,
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Remove hover effects and use active states */
+  .btn:hover {
+    transform: none;
+  }
+
+  .btn:active {
+    transform: scale(0.97);
+  }
+
+  /* Social links */
+  .social-link:active {
+    transform: scale(0.95);
+  }
+}
+
+/* High DPI/Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Improve font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Sharper borders */
+  .project-card,
+  .info-card,
+  .stat-card {
+    border-width: 0.5px;
+  }
+}
+
+/* Dark mode enhancement for mobile */
+@media (max-width: 768px) {
+  body.dark-vertion {
+    background: #0a0a1a;
+  }
+
+  /* Ensure text is readable on mobile */
+  .mh-home .mh-header-info p,
+  .project-description,
+  .info-card p {
+    font-size: max(14px, 2.5vw);
+  }
+}
+
+/* Prevent text overflow on mobile */
+@media (max-width: 575px) {
+  * {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Fix containers */
+  .container,
+  .container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Smooth animations for mobile */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /*# sourceMappingURL=responsive.css.map */

@@ -496,28 +496,159 @@
   .hero-social {
     justify-content: center;
   }
-}
 
-@media (max-width: 575px) {
-  .hero-image-border {
+  /* Adjust floating shapes for tablet */
+  .shape-1 {
     width: 250px;
     height: 250px;
   }
 
+  .shape-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .shape-3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .shape-4 {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Center all content on mobile */
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-badge {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-contact {
+    align-items: center;
+  }
+
+  .hero-actions {
+    align-items: center;
+  }
+
+  /* Hide tech icons on smaller mobile */
+  .tech-icon {
+    display: none;
+  }
+
+  /* Reduce shape sizes */
+  .shape-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -50px;
+  }
+
+  .shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: -30px;
+    left: -30px;
+  }
+
+  .shape-3 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .shape-4 {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-image-border {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-image-wrapper {
+    padding: 15px;
+  }
+
   .hero-name {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .hero-summary {
     font-size: 14px;
+    max-width: 100%;
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* Further reduce shapes for small mobile */
+  .shape-1,
+  .shape-2,
+  .shape-3,
+  .shape-4 {
+    opacity: 0.3;
+  }
+
+  .contact-item {
+    font-size: 14px;
+  }
+
+  .contact-item i {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-image-border {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-name {
+    font-size: 24px;
+  }
+
+  .hero-title {
+    font-size: 14px;
+  }
+
+  .hero-promo span {
+    font-size: 14px;
+  }
+
+  .hero-badge span {
+    font-size: 12px;
   }
 }
