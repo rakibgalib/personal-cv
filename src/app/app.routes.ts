@@ -5,11 +5,14 @@ import { SkillsComponent } from './sections/skills/skills.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
 import { PortfolioComponent } from './sections/portfolio/portfolio.component';
 import { EducationComponent } from './sections/education/education.component';
+import { ContactComponent } from './sections/contact/contact.component';
+
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
-{ path: 'experience', component: ExperienceComponent },
-{ path: 'portfolio', component: PortfolioComponent },
-{ path: 'education', component: EducationComponent },
+  { path: 'experience', component: ExperienceComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'education', component: EducationComponent },
+  { path: 'contact', component: ContactComponent },
 ];

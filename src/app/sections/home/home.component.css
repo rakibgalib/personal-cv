@@ -1,5 +1,11 @@
 /* ===== HERO SECTION STYLES ===== */
 
+.mh-home {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 /* Background */
 .hero-bg {
   position: absolute;
@@ -480,6 +486,15 @@
 
 /* Mobile Responsive */
 @media (max-width: 991px) {
+  .mh-home {
+    min-height: auto;
+    padding-top: 80px;
+  }
+
+  .hero-content {
+    padding: 15px;
+  }
+
   .hero-image-border {
     width: 300px;
     height: 300px;
@@ -496,28 +511,316 @@
   .hero-social {
     justify-content: center;
   }
-}
 
-@media (max-width: 575px) {
-  .hero-image-border {
+  /* Floating shapes - reduce size */
+  .shape-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .shape-2 {
     width: 250px;
     height: 250px;
   }
 
+  .shape-3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .shape-4 {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Tech icons - adjust positions */
+  .tech-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-home {
+    padding-top: 70px;
+  }
+
+  .hero-bg {
+    height: 100%;
+  }
+
+  .gradient-bg::before {
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+  }
+
+  .hero-image-border {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-image-wrapper {
+    padding: 15px;
+  }
+
+  .hero-badge {
+    padding: 6px 14px;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .hero-promo span {
+    font-size: 16px;
+  }
+
   .hero-name {
-    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .hero-title-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .hero-summary {
+    font-size: 15px;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
+
+  .hero-contact {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .contact-item {
+    font-size: 14px;
+  }
+
+  .contact-item i {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  /* Hide or minimize floating shapes on mobile */
+  .shape-1 {
+    width: 200px;
+    height: 200px;
+    opacity: 0.4;
+  }
+
+  .shape-2 {
+    width: 150px;
+    height: 150px;
+    opacity: 0.4;
+  }
+
+  .shape-3 {
+    width: 100px;
+    height: 100px;
+    opacity: 0.3;
+  }
+
+  .shape-4 {
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+  }
+
+  /* Tech icons */
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 575px) {
+  .mh-home {
+    padding-top: 60px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  .hero-image-border {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-image-wrapper {
+    padding: 10px;
+  }
+
+  .hero-badge {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .hero-promo span {
+    font-size: 14px;
+  }
+
+  .hero-name {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: 10px;
   }
 
   .hero-title {
-    font-size: 18px;
+    font-size: clamp(16px, 4vw, 20px);
   }
 
   .hero-summary {
     font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .hero-contact {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    font-size: 13px;
+  }
+
+  .contact-item i {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    gap: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .hero-social {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* Minimal floating shapes */
+  .shape {
+    opacity: 0.3;
+  }
+
+  .shape-1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .shape-2 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .shape-3 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .shape-4 {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Hide tech icons on very small screens */
+  .floating-tech {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .mh-home {
+    padding-top: 50px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 10px;
+  }
+
+  .hero-image-border {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-badge {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .hero-promo span {
+    font-size: 13px;
+  }
+
+  .hero-name {
+    font-size: 26px;
+  }
+
+  .hero-title {
+    font-size: 15px;
+  }
+
+  .hero-summary {
+    font-size: 13px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+  }
+
+  .contact-item i {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  /* Hide most decorations on very small screens */
+  .shape {
+    opacity: 0.2;
+  }
+
+  .image-ring {
+    border-width: 1px;
   }
 }

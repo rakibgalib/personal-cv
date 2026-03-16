@@ -1,44 +1,250 @@
+/* ===== EXPERIENCE SECTION ===== */
+
+.mh-experience {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%);
+  min-height: 100vh;
+}
+
+/* Section Header */
+.mh-experience .section-separator {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+/* Section Header */
+.mh-experience .section-separator {
+  position: relative;
+  z-index: 1;
+}
+
+/* Work Items Container */
+.mh-work {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Work Item */
 .mh-work-item {
-  padding: 20px;
-  margin-bottom: 25px;
-  border-radius: 8px;
-  background-color: #1f1f25; /* Dark background */
+  padding: 24px 28px;
+  margin-bottom: 0;
+  border-radius: 20px;
+  background-color: rgba(31, 31, 37, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
 }
 
-.mh-work-item h4 a {
-  color: #ffb400; /* Highlight company name */
-  text-decoration: none;
+.mh-work-item:hover {
+  transform: translateY(-4px);
+  background-color: rgba(31, 31, 37, 0.95);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-.mh-eduyear {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-bottom: 10px;
-}
-
-.work-responsibility li {
-  color: #fff;
-  line-height: 1.6;
-}
-
-.work-responsibility li i {
-  color: #ffb400;
-  margin-right: 8px;
-}
-
-h3.text-white {
-  color: white;
-  margin-bottom: 30px;
-}
+/* Work Logo */
 .work-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px; /* space between logo and info */
+  margin-bottom: 16px;
 }
 
 .company-logo {
-  height: 50px; /* fixed height */
-  width: auto;   /* maintain aspect ratio */
+  height: 60px;
+  width: auto;
   object-fit: contain;
+  filter: brightness(1.1);
+}
+
+/* Work Info */
+.work-info {
+  position: relative;
+}
+
+.mh-work-item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.mh-work-item h4 a {
+  color: #ffb400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mh-work-item h4 a:hover {
+  color: #ffc107;
+}
+
+/* Year */
+.mh-eduyear {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 50px;
+  font-size: 14px;
+  color: #a5b4fc;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Responsibility Label */
+.work-info > span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #818cf8;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsibility List */
+.work-responsibility {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work-responsibility li {
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 8px;
+}
+
+.work-responsibility li i {
+  color: #ffb400;
+  margin-right: 0;
+  flex-shrink: 0;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+/* Section Title */
+h3.text-white {
+  color: white;
+  margin-bottom: 40px;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 991px) {
+  .mh-experience {
+    padding: 80px 15px;
+  }
+
+  .mh-experience .section-separator {
+    padding: 0;
+  }
+
+  .mh-work-item {
+    padding: 20px 24px;
+  }
+
+  .company-logo {
+    height: 50px;
+  }
+
+  .mh-work-item h4 {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .mh-experience {
+    padding: 60px 12px;
+  }
+
+  .mh-work {
+    gap: 20px;
+  }
+
+  .mh-work-item {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .company-logo {
+    height: 45px;
+  }
+
+  .mh-work-item h4 {
+    font-size: 17px;
+  }
+
+  .mh-eduyear {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .work-responsibility li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  h3.text-white {
+    margin-bottom: 30px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .mh-experience {
+    padding: 50px 10px;
+  }
+
+  .mh-work-item {
+    padding: 16px;
+  }
+
+  .company-logo {
+    height: 40px;
+    max-width: 120px;
+  }
+
+  .mh-work-item h4 {
+    font-size: 16px;
+  }
+
+  .mh-eduyear {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .work-info > span {
+    font-size: 12px;
+  }
+
+  .work-responsibility li {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .work-responsibility li i {
+    margin-top: 4px;
+  }
 }

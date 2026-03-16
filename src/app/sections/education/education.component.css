@@ -389,13 +389,40 @@
 }
 
 /* Responsive Design */
+@media (max-width: 991px) {
+  .modern-education {
+    padding: 80px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   .modern-education {
     padding: 60px 0;
   }
 
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-subtitle {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
   .section-title {
     font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 15px;
   }
 
   .timeline-item {
@@ -423,11 +450,42 @@
   .section-header-inline {
     flex-wrap: wrap;
   }
+
+  .section-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 575px) {
+  .modern-education {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 28px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  .timeline-item {
+    gap: 14px;
+  }
+
   .card-header {
     padding: 20px;
+    border-radius: 16px;
   }
 
   .card-icon {
@@ -451,9 +509,137 @@
 
   .cert-card {
     padding: 16px;
+    border-radius: 12px;
   }
 
   .cert-name {
     font-size: 15px;
+  }
+
+  .cert-org {
+    font-size: 12px;
+  }
+
+  .stat-box {
+    padding: 20px;
+  }
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+  }
+
+  .marker-dot {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-education {
+    padding: 45px 0;
+  }
+
+  .card-header {
+    padding: 18px;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+  }
+
+  .card-year {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .cert-card {
+    padding: 14px;
+  }
+
+  .cert-name {
+    font-size: 14px;
+  }
+
+  .cert-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .stat-box {
+    padding: 16px;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .modern-education {
+    padding: 40px 0;
+  }
+
+  .card-header {
+    padding: 16px;
+  }
+
+  .card-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-year {
+    padding: 4px 10px;
+  }
+
+  .cert-card {
+    padding: 12px;
+  }
+
+  .cert-name {
+    font-size: 13px;
+  }
+
+  .stat-box {
+    padding: 14px;
+  }
+
+  .stat-number {
+    font-size: 22px;
   }
 }
