@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PORTFOLIO, SkillGroup } from '../../data';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
-
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })

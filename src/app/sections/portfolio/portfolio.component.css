@@ -1,3 +1,51 @@
+/* Portfolio Section */
+.portfolio-section {
+  position: relative;
+  padding: 100px 20px 50px 20px;
+  background: linear-gradient(180deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%);
+  min-height: 100vh;
+}
+
+/* Portfolio Header */
+.portfolio-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 60px;
+}
+
+.section-subtitle {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 50px;
+  color: #a5b4fc;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
 /* Container */
 .portfolio-container {
   max-width: 1200px;
@@ -126,8 +174,20 @@
 
 /* Tablets */
 @media (max-width: 991px) {
+  .portfolio-section {
+    padding: 80px 15px 40px 15px;
+  }
+
+  .portfolio-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
   .portfolio-container {
-    padding: 80px 20px 40px 20px;
+    padding: 0;
   }
 
   .projects-grid {
@@ -156,8 +216,29 @@
 
 /* Mobile */
 @media (max-width: 767px) {
-  .portfolio-container {
+  .portfolio-section {
     padding: 60px 12px 30px 12px;
+  }
+
+  .portfolio-header {
+    margin-bottom: 32px;
+  }
+
+  .section-subtitle {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+
+  .portfolio-container {
+    padding: 0;
   }
 
   .projects-grid {
@@ -220,8 +301,29 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
-  .portfolio-container {
+  .portfolio-section {
     padding: 50px 12px 25px 12px;
+  }
+
+  .portfolio-header {
+    margin-bottom: 28px;
+  }
+
+  .section-subtitle {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  .portfolio-container {
+    padding: 0;
   }
 
   .project-card {
@@ -269,8 +371,24 @@
 
 /* Very Small Mobile */
 @media (max-width: 375px) {
-  .portfolio-container {
+  .portfolio-section {
     padding: 40px 10px 20px 10px;
+  }
+
+  .portfolio-header {
+    margin-bottom: 24px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+
+  .portfolio-container {
+    padding: 0;
   }
 
   .project-card {

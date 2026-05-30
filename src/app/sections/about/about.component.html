@@ -61,11 +61,11 @@
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">{{ portfolio?.projects?.length || 10 }}+</div>
+            <div class="stat-number">{{ portfolio.projects.length || 10 }}+</div>
             <div class="stat-label">Projects Completed</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">{{ portfolio?.skills?.length || 5 }}</div>
+            <div class="stat-number">{{ portfolio.skills.length || 5 }}</div>
             <div class="stat-label">Skill Categories</div>
           </div>
           <div class="stat-card">
@@ -109,7 +109,7 @@
                 <i class="fa fa-graduation-cap"></i>
                 Education
               </span>
-              <span class="info-value">{{ education?.[0]?.degree || 'B.Sc. in Software Engineering' }}</span>
+              <span class="info-value">{{ (education[0] && education[0].degree) || 'B.Sc. in Software Engineering' }}</span>
             </div>
           </div>
         </div>

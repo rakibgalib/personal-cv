@@ -18,6 +18,39 @@
   margin-bottom: 2rem;
 }
 
+/* Section Title */
+.section-title h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 50px;
+  color: #a5b4fc;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.mh-skills-inner h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
   .skill-group:nth-child(n+3) {
     margin-top: 2rem;
@@ -151,6 +184,20 @@ body.dark-vertion .skills-list li span {
     padding: 40px 10px;
   }
 
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
+  .mh-skills-inner h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
   .skills-list {
     gap: 5px;
   }
@@ -165,6 +212,28 @@ body.dark-vertion .skills-list li span {
 
   .skills-list li span {
     font-size: 11px;
+  }
+}
+
+/* ===== SKILLS SECTION HEADING FIX ===== */
+
+.mh-skills .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mh-skills .section-subtitle {
+  display: block;
+  margin: 0 auto 16px;
+}
+
+@media (max-width: 767px) {
+  .mh-skills .section-title {
+    margin-bottom: 30px;
+  }
+
+  .mh-skills .section-subtitle {
+    margin: 0 auto 12px;
   }
 }
  

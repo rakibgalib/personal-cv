@@ -8,16 +8,49 @@
 }
 
 /* Section Header */
+.section-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 60px;
+}
+
+.section-subtitle {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 50px;
+  color: #a5b4fc;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
 .mh-experience .section-separator {
   position: relative;
   z-index: 1;
   padding: 0 20px;
-}
-
-/* Section Header */
-.mh-experience .section-separator {
-  position: relative;
-  z-index: 1;
 }
 
 /* Work Items Container */
@@ -156,6 +189,18 @@ h3.text-white {
     padding: 80px 15px;
   }
 
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+
   .mh-experience .section-separator {
     padding: 0;
   }
@@ -177,6 +222,23 @@ h3.text-white {
 @media (max-width: 767px) {
   .mh-experience {
     padding: 60px 12px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-subtitle {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 15px;
   }
 
   .mh-work {
@@ -215,6 +277,19 @@ h3.text-white {
 @media (max-width: 480px) {
   .mh-experience {
     padding: 50px 10px;
+  }
+
+  .section-header {
+    margin-bottom: 28px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    padding: 5px 12px;
+    font-size: 12px;
   }
 
   .mh-work-item {

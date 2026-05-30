@@ -41,11 +41,13 @@ export class HeaderComponent {
     const toggler = document.querySelector('.navbar-toggler');
 
     if (this.isMenuOpen) {
-      this.renderer.addClass(navbarCollapse, 'active');
+      // Show menu
+      this.renderer.addClass(navbarCollapse, 'show');
       this.renderer.addClass(overlay, 'active');
       this.renderer.addClass(toggler, 'active');
     } else {
-      this.renderer.removeClass(navbarCollapse, 'active');
+      // Hide menu
+      this.renderer.removeClass(navbarCollapse, 'show');
       this.renderer.removeClass(overlay, 'active');
       this.renderer.removeClass(toggler, 'active');
     }

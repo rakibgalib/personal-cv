@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { PORTFOLIO, Project } from '../../data';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css']
 })

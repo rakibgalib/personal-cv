@@ -5,6 +5,7 @@ header#mh-header {
   position: relative !important;
   z-index: 1000 !important;
   transition: all 0.3s ease;
+  background: transparent;
 }
 
 /* Ensure nav container has proper z-index */
@@ -12,6 +13,38 @@ header#mh-header {
   position: relative !important;
   z-index: 1001 !important;
   padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mobile nav fix - reduce spacing */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 10px 0;
+  }
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
 }
 
 /* Ensure nav links are always clickable */
@@ -19,6 +52,8 @@ header#mh-header {
   position: relative !important;
   z-index: 1002 !important;
   gap: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item {
@@ -32,16 +67,17 @@ header#mh-header {
   pointer-events: auto !important;
   padding: 8px 16px !important;
   border-radius: 8px;
-  color: #cbd5e1 !important;
+  color: #ffffff !important;
   font-weight: 500;
   font-size: 15px;
   transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background: rgba(99, 102, 241, 0.15) !important;
-  color: #a5b4fc !important;
+  background: rgba(99, 102, 241, 0.25) !important;
+  color: #ffffff !important;
 }
 
 /* Overlay */
@@ -155,6 +191,20 @@ header#mh-header {
     background: rgba(99, 102, 241, 0.3);
   }
 
+  /* Show mobile menu */
+  .navbar-collapse.show,
+  .navbar-collapse.active {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Hide navbar collapse by default on mobile */
+  .navbar-collapse {
+    display: none;
+  }
+
   .navbar-toggler-icon.icon,
   .navbar-toggler-icon.icon::before,
   .navbar-toggler-icon.icon::after {
@@ -179,12 +229,39 @@ header#mh-header {
     height: 100vh !important;
     width: 300px !important;
     max-width: 85vw !important;
-    background: linear-gradient(180deg, #1a1a2e 0%, #0f0f23 100%) !important;
+    background: rgba(26, 26, 38, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
     z-index: 9999 !important;
-    padding: 100px 30px 30px !important;
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5) !important;
+    padding: 80px 20px 20px !important;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3) !important;
     transform: translateX(0);
     animation: slideIn 0.3s ease;
+  }
+
+  /* Show state for mobile */
+  .navbar-collapse.show.show {
+    opacity: 1 !important;
+  visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .navbar-collapse.active.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Hide state for mobile */
+  .navbar-collapse.hide {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .navbar-collapse.active.hide {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 
   @keyframes slideIn {
@@ -247,6 +324,12 @@ header#mh-header {
 
 /* Small Mobile */
 @media (max-width: 480px) {
+  .navbar-brand {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
   .navbar-toggler {
     top: 12px;
     right: 12px;

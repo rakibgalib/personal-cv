@@ -266,8 +266,6 @@ a {
   padding: 20px 0; }
   
   section {
-    //padding: 60px 0;
-    //padding-bottom: 30px;
 }
 
 /**
@@ -2683,3 +2681,507 @@ BLOG Pagination
   margin-bottom: 30px; }
 
 /*# sourceMappingURL=styles.css.map */
+/* ===== GLOBAL MOBILE RESPONSIVENESS ===== */
+
+/* Base styles for all sections */
+section {
+  position: relative;
+  min-height: auto;
+}
+
+/* Container adjustments for mobile */
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Row adjustments */
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.row > [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Section separator adjustments */
+.section-separator {
+  padding: 60px 0;
+}
+
+.home-section-separator {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+/* ===== MOBILE NAVIGATION ENHANCEMENTS ===== */
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-collapse.show,
+  .navbar-collapse.active {
+    display: block !important;
+  }
+}
+
+/* ===== HERO SECTION MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .xs-column-reverse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vertical-middle-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mh-home {
+    min-height: auto;
+    padding-top: 100px;
+  }
+
+  .home-ovimg {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-home {
+    padding-top: 80px;
+  }
+
+  .mh-header-info {
+    padding-top: 40px !important;
+    text-align: center;
+  }
+
+  .mh-header-info h2 {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+
+  .mh-header-info h4 {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+
+  .mh-header-info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mh-header-info ul li {
+    margin: 0;
+  }
+
+  .mh-home-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .mh-header-info .social-icon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .mh-header-info .social-icon li {
+    margin: 0 5px;
+  }
+
+  .mh-about-tag {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mh-header-info h2 {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+
+  .mh-header-info h4 {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+
+  .mh-header-info p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+
+/* ===== ABOUT SECTION MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .mh-about-img {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .mh-about-inner {
+    text-align: center;
+  }
+
+  .mh-about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .mh-about-skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .mh-about-skills li {
+    margin: 0;
+  }
+}
+
+/* ===== SKILLS SECTION MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .mh-professional-skills {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .mh-professional-skills h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .mh-professional-progress li {
+    width: 100% !important;
+    margin-bottom: 25px;
+  }
+
+  .progress.progress-line {
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-professional-skill {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .mh-professional-skill h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .mh-progress.mh-progress-circle {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ===== EXPERIENCE SECTION MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .mh-experince h3 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-experince h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .mh-experince .mh-education-deatils .mh-education-item {
+    padding: 20px;
+  }
+
+  .mh-experince .mh-education-deatils .mh-education-item h3 {
+    font-size: 18px;
+  }
+
+  .mh-experince .mh-education-deatils .mh-education-item h4 {
+    font-size: 16px;
+  }
+}
+
+/* ===== PORTFOLIO SECTION MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .mh-portfolio {
+    padding: 60px 0;
+  }
+
+  .mh-portfolio h3 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .mh-project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-portfolio {
+    padding: 50px 0;
+  }
+
+  .mh-portfolio h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .mh-project-gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* ===== EDUCATION SECTION MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .mh-experince {
+    padding: 60px 0;
+  }
+
+  .mh-education-deatils {
+    padding: 0;
+  }
+
+  .mh-education-item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-education-item {
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+
+  .mh-education-item h3 {
+    font-size: 18px;
+  }
+
+  .mh-education-item h4 {
+    font-size: 16px;
+  }
+
+  .mh-eduyear {
+    font-size: 13px;
+  }
+}
+
+/* ===== CONTACT SECTION MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .mh-footer-address {
+    text-align: center;
+  }
+
+  .mh-address-footer-item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .mh-footer .form-control,
+  .mh-footer .contact-message {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-footer-address {
+    margin-bottom: 30px;
+  }
+
+  .mh-address-footer-item {
+    display: block;
+    margin: 0 0 15px 0;
+    text-align: center;
+  }
+
+  .mh-footer .btn-submit {
+    width: 100%;
+  }
+
+  .mh-subscribe {
+    text-align: center;
+  }
+}
+
+/* ===== FOOTER MOBILE FIXES ===== */
+
+@media (max-width: 991px) {
+  .mh-footer {
+    padding: 50px 0 30px;
+  }
+
+  .mh-footer-address {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .mh-footer-widget {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .mh-footer-widget h4 {
+    font-size: 18px;
+  }
+
+  .mh-footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mh-footer {
+    padding: 40px 0 20px;
+  }
+
+  .mh-footer-address {
+    margin-bottom: 25px;
+  }
+
+  .mh-footer-widget {
+    margin-bottom: 25px;
+  }
+
+  .mh-copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* ===== GLOBAL UTILITIES ===== */
+
+/* Text overflow handling */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Center utilities */
+.text-center-mobile {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text-center-mobile {
+    text-align: inherit;
+  }
+}
+
+/* Spacing utilities */
+.py-mobile-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .py-mobile-3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #1a1a2e;
+}
+
+/* ===== TOUCH TARGET SIZES ===== */
+
+button,
+a,
+input,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+textarea {
+  min-height: 88px;
+}
+
+/* ===== FOCUS STATES ===== */
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ===== PREFERS REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
